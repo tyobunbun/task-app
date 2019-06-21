@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+タスクを以下のようにモデリングしました:
 
-Things you may want to cover:
+* モデル名：task
 
-* Ruby version
+* title：string
 
-* System dependencies
+* description：text
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* .........
