@@ -1,29 +1,22 @@
- development:
-  adapter: postgresql
-  encoding: utf8
-  reconnect: false
+default: &default
+  adapter: postgresql 
+  username: postgres 
+  password: postgres
+  pool: 5
+
+development:
+  <<: *default
   database: task_app_development
-  pool: 5
-  username: postgres
-  password: 123456
-  host: localhost
-  
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
 test:
-  adapter: postgresql
-  encoding: utf8
-  reconnect: false
+  <<: *default
   database: task_app_test
-  pool: 5
-  username: postgres
-  password: 123456
-  host: localhost
-  
+
 production:
-  adapter: postgresql
-  encoding: utf8
-  reconnect: false
+  <<: *default
   database: task_app_production
-  pool: 5
-  username: postgres
-  password: 123456
-  host: localhost
+  username: task_app
+  password: <%= ENV['TASK_APP_DATABASE_PASSWORD'] %>
